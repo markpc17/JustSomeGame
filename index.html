@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>After Tranquility</title>
+<meta name="description" content="An open-world voyage where the landscape is made of feelings. Keep a young crew together aboard the ISV Collins as they search the stars for a new home.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<div id="hud">
+  <div id="hudL"></div>
+  <div id="hudC"></div>
+  <div id="hudR"></div>
+</div>
+<div id="suit" class="hidden"></div>
+<div id="prompt" class="hidden"></div>
+<div id="toasts"></div>
+
+<div id="cruise" class="hidden">
+  <div id="cruiseTitle"></div>
+  <div class="progress"><i id="cruiseBar"></i></div>
+  <div id="cruiseLog"></div>
+</div>
+
+<div id="mapPanel" class="hidden"></div>
+
+<div id="modal" class="hidden">
+  <div id="modalCard">
+    <div class="mHead"><div id="mPortrait"></div><h2 id="mTitle"></h2></div>
+    <div id="mBody"></div>
+    <div id="mExtra"></div>
+    <div id="mChoices"></div>
+  </div>
+</div>
+
+<div id="journal" class="hidden">
+  <div class="jCard">
+    <div id="jTabs"></div>
+    <div id="jBody"></div>
+  </div>
+</div>
+
+<div id="title">
+  <div class="titleInner">
+    <div class="kicker">1969 · Tranquility Base · The world did not go home</div>
+    <h1>After<br>Tranquility</h1>
+    <p class="tag">An open world made of feelings. Eleven young volunteers. One ship. No way back.</p>
+    <label for="pname">Your name, Crew Liaison</label>
+    <input id="pname" maxlength="18" placeholder="Rook" autocomplete="off">
+    <div class="btns">
+      <button id="btnNew" class="big">Begin a new voyage</button>
+      <button id="btnContinue" class="hidden">Continue</button>
+    </div>
+    <p class="hint">WASD to walk · E to interact · J for journal · M for star map · works with touch too</p>
+  </div>
+</div>
+
+<div id="ending" class="hidden"></div>
+
+<div id="touch" class="hidden">
+  <div class="dpad">
+    <button data-k="w" class="u">▲</button>
+    <button data-k="a" class="l">◀</button>
+    <button data-k="d" class="r">▶</button>
+    <button data-k="s" class="d">▼</button>
+  </div>
+  <div class="acts">
+    <button id="tJ">J</button>
+    <button id="tM">M</button>
+    <button data-k="e" class="e">E</button>
+  </div>
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/data_crew.js"></script>
+<script src="js/data_events.js"></script>
+<script src="js/state.js"></script>
+<script src="js/galaxy.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/ship.js"></script>
+<script src="js/planet.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
